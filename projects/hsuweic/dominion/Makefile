@@ -61,6 +61,8 @@ unittestresults: unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 car
 	@./unittest_result_generator
 	@chmod +x cardtest_result_generator
 	@./cardtest_result_generator
+	echo "============ GENERAL ANALYSIS ============" >> unittestresults.out
+	gcov dominion.c --function-summaries >> unittestresults.out
 
 
 player: player.c interface.o
