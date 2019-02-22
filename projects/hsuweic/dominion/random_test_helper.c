@@ -17,7 +17,7 @@
 #define TOTAL_TREASURE_NUMBER 3
 #define CARDS_NUMBER 11
 
-void testEqual(char *message, int expected, int actual, bool *test_result) {
+void testEqual(char *message, int expected, int actual, bool *test_result, int *test_counter, int *test_passed_counter) {
   int len = strlen(message);
   char outputMessage[len + 50];
   memset(&outputMessage, 0, sizeof(outputMessage));
@@ -28,10 +28,15 @@ void testEqual(char *message, int expected, int actual, bool *test_result) {
     strcat(outputMessage, " || FAILED ||");
     printf("%s expected = %d, actual = %d\n", outputMessage, expected, actual);
     *test_result = false;
+  } 
+  else
+  {
+    *test_passed_counter += 1;
   }
+  *test_counter += 1;
 }
 
-void testResult(bool test_result)
+void testResult(bool test_result, int test_counter, int test_passed_counter)
 {
   if(test_result)
   {
@@ -41,6 +46,7 @@ void testResult(bool test_result)
   {
     printf("You got some bugs, please read the error message.\n");
   }
+  printf("The testing passed rate is: %f", (test_passed_counter / (double)test_counter) * 100);
 }
 
 struct gameState gameStateRandomlyGenerate()

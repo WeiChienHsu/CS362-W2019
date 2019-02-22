@@ -26,6 +26,8 @@ void testCardAdventurer()
     int testTime = 10;
     int handHold[MAX_HAND];
     bool test_result = true;
+    int test_counter = 0;
+    int test_passed_counter = 0;
     int* treasure_cards = malloc(3 * sizeof(SILVER)); 
     treasure_cards[0] = COPPER;
     treasure_cards[1] = ESTATE;
@@ -57,16 +59,16 @@ void testCardAdventurer()
         playAdventurer(&game, handHold, currentPlayer);
         
         /* Test for the Hand count and played card  */
-        testEqual("Played Card Should Contains One more card.", currentPlayedCardCount + 1, game.playedCardCount, &test_result);
-        testEqual("Hand Card Should Contains One more card.", currentHandCount + 1, game.handCount[currentPlayer], &test_result);
+        testEqual("Played Card Should Contains One more card.", currentPlayedCardCount + 1, game.playedCardCount, &test_result, &test_counter, &test_passed_counter);
+        testEqual("Hand Card Should Contains One more card.", currentHandCount + 1, game.handCount[currentPlayer], &test_result, &test_counter, &test_passed_counter);
         
         int currentTreasure = game.hand[currentPlayer][currentHandCount];
 
-        testEqual("At least contains one type of treasure cards in hand.", false ,currentTreasure != COPPER && currentTreasure != SILVER && currentTreasure != GOLD, &test_result);
-        testEqual("There should have 2 TREASURES in HAND", 2, game.handCount[currentPlayer] - currentHandCount, &test_result);
+        testEqual("At least contains one type of treasure cards in hand.", false ,currentTreasure != COPPER && currentTreasure != SILVER && currentTreasure != GOLD, &test_result, &test_counter, &test_passed_counter);
+        testEqual("There should have 2 TREASURES in HAND", 2, game.handCount[currentPlayer] - currentHandCount, &test_result, &test_counter, &test_passed_counter);
     }
 
-    testResult(test_result);
+    testResult(test_result, test_counter, test_passed_counter);
 }
 
 
