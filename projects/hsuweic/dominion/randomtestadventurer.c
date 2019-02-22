@@ -49,10 +49,8 @@ void testCardAdventurer()
         int currentPlayedCardCount = game.playedCardCount;
         
         /* Randomly assign TREASURE CARDS */
-        int estateNumber = rand() % TREASURE_CARD_NUM;
-
-        for(int j = estateNumber; j < 6; j++) {
-            game.deck[currentPlayer][i] = COPPER;
+        for(int i = 0; i < 6; i++) {
+            game.deck[currentPlayer][i] = treasure_cards[rand() % TREASURE_CARD_NUM];
         }
 
         /* The main tested function */

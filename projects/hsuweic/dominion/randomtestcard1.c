@@ -17,7 +17,7 @@
 #include <time.h>
 #include <math.h>
 
-void testCardVillage()
+void testCardSmithy()
 {
     int testTime = 10;
     bool test_result = true;
@@ -30,42 +30,40 @@ void testCardVillage()
         struct gameState game = gameStateRandomlyGenerate();
         
         int currentPlayer = rand() % game.numPlayers;
-        int currentAction = game.numActions;
-        int villagePosition = 0;
+        int smithyPosition = 0;
+        int currentHandCount = 0;
+        int currentDeckCount = 0;
 
-        /* Cache the current Values */
-        int currentHandCount = game.handCount[currentPlayer];
+        /* Add Smith to hand */
+        gainCard(SMITHY, &game, 2, currentPlayer);
 
-        gainCard(VILLAGE, &game, 0, currentPlayer);
-
-        /* get Village position */
+        /* Get Smithy position */
         for(int i = 0; i < game.handCount[currentPlayer]; i++) 
         {
-          if(game.hand[currentPlayer][i] == VILLAGE)
+          if(game.hand[currentPlayer][i] == SMITHY)
           {
-            villagePosition = i;
+            smithyPosition = i;
             break;
           }
         }
-        
-        game.whoseTurn = currentPlayer;
 
-        /* The main tested function */
-        playVILLAGE(&game, currentPlayer, villagePosition);
+        currentHandCount = game.handCount[currentPlayer];
+        currentDeckCount = game.deckCount[currentPlayer];
+
+        playSmithy(&game, currentPlayer, smithyPosition);
         
         /* Test for the Hand count and played card  */
-        testEqual("Check VILLAGE has been played.", VILLAGE, game.playedCards[0], &test_result, &test_counter, &test_passed_counter);
-        testEqual("Current player should get 1 more cards", 1, game.handCount[currentPlayer] - currentHandCount, &test_result, &test_counter, &test_passed_counter);
-        testEqual("There should have 2 more actions", 2, game.numActions - currentAction, &test_result, &test_counter, &test_passed_counter);
+        testEqual("Number of cards in hand should + 3 - 1 after playing Smithy", 2, game.handCount[currentPlayer] - currentHandCount, &test_result, &test_counter, &test_passed_counter);
+        testEqual("Number of cards in deck should - 3 + 1 after playing Smithy", 2, currentDeckCount - game.deckCount[currentPlayer], &test_result, &test_counter, &test_passed_counter);
+        testEqual("Check SMITHY has been played.", SMITHY, game.playedCards[0], &test_result, &test_counter, &test_passed_counter);
+        testEqual("Difference between hand and deck should increase by 4",
+             currentHandCount - currentDeckCount + 4,  game.handCount[currentPlayer] - game.deckCount[currentPlayer], &test_result, &test_counter, &test_passed_counter);
     }
-
     testResult(test_result, test_counter, test_passed_counter);
 }
 
-
-
 int main() 
 {
-  testCardVillage();
+  testCardSmithy();
   return 0;
 }
