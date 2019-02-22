@@ -3,5 +3,6 @@
 
 void testEqual(char *, int , int , bool *);
 void testResult(bool);
+struct gameState gameStateRandomlyGenerate();
 
 #endif
