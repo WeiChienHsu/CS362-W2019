@@ -6,8 +6,6 @@
 #include <stdbool.h>
 #include "rngs.h"
 #include "dominion_cards_helpers.h"
-#include <time.h>
-#include <math.h>
 #define MAX_PLAYER_NUMBER 4
 #define MIN_PLAYER_NUMBER 2
 #define MAX_COIN_NUMBER 8
@@ -25,12 +23,7 @@ void testEqual(char *message, int expected, int actual, bool *test_result) {
   memset(&outputMessage, 0, sizeof(outputMessage));
   strcat(outputMessage, "Test: ");
   strcat(outputMessage, message);
-  if(expected == actual)
-  {
-    strcat(outputMessage, " || PASSED ||");
-    printf("%s expected = %d, actual = %d\n", outputMessage, expected, actual);
-  }
-  else
+  if(expected != actual)
   {
     strcat(outputMessage, " || FAILED ||");
     printf("%s expected = %d, actual = %d\n", outputMessage, expected, actual);
@@ -53,8 +46,6 @@ void testResult(bool test_result)
 struct gameState gameStateRandomlyGenerate()
 {
     struct gameState game;
-    srand(time(0));
-
     /* Set up players information */
 
     game.numPlayers = rand() % (MAX_PLAYER_NUMBER - 1) + (MIN_PLAYER_NUMBER); 

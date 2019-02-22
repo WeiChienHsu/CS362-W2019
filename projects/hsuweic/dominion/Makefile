@@ -90,4 +90,4 @@ player: player.c interface.o
 all: playdom player 
 
 clean:
-	rm -f *.o playdom.exe playdom player player.exe test_helper unittest1 unittest2 unittest3 cardtest4 cardtest1 cardtest2 cardtest3 unittest4 *.gcov *.gcda *.gcno *.so *.out testDrawCard testDrawCard.exe
+	rm -f *.o playdom.exe playdom player player.exe test_helper random_test_helper randomtestadventurer randomtestcard1 randomtestcard2 unittest1 unittest2 unittest3 cardtest4 cardtest1 cardtest2 cardtest3 unittest4 *.gcov *.gcda *.gcno *.so *.out testDrawCard testDrawCard.exe
