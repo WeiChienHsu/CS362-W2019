@@ -1,6 +1,14 @@
 # Wei-Chien Hsu hsuweic
 
+This is my assignment-4 submission!
+
+:hammer:
+
+***
+
 This is my assignemnt-3 submission!
+
+***
 
 
 ### Wrute 4 unit tests for 4 different functions
@@ -83,12 +91,16 @@ bst.c:creating 'bst.c.gcov'
 
 
 In these and other tests, I find it helpful to make all tests print “TEST SUCCESSFULLY COMPLETED” or some other message if and only if the entire test passes, and usually (this isn’t always possible for crashing bugs) print “TEST FAILED” for a failure. This makes it easy to process failing and passing tests. 
+>>>>>>> eea95ce047991baf25d83befd350366e25b1a3da
 
 ***
 
 This is my assignment-2 submission!
 
 :construction:
+
+***
+
 
 ***
 

@@ -850,7 +850,7 @@ int playAdventurer(struct gameState *state,
         /* top card of hand is most recently drawn card. */
 	    
         /* BUG: GOLD has been removed */
-        if (cardDrawn == COPPER || cardDrawn == SILVER)
+        if (cardDrawn == COPPER || cardDrawn == SILVER || cardDrawn == GOLD)
         {
             drawntreasure++;
         }
