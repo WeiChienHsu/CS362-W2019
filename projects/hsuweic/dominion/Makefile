@@ -83,6 +83,18 @@ randomtestresults: randomtestcard1 randomtestcard2 randomtestadventurer
 	echo "============ GENERAL ANALYSIS ============" >> randomtestresults.out
 	gcov dominion.c --function-summaries >> randomtestresults.out
 
+randomtestcard1.out: randomtestcard1
+	@chmod +x randomtestcard1_result_generator
+	@./randomtestcard1_result_generator
+	
+randomtestcard2.out: randomtestcard2
+	@chmod +x randomtestcard2_result_generator
+	@./randomtestcard2_result_generator
+	
+randomtestadventurer.out: randomtestadventurer
+	@chmod +x randomtestadventurer_result_generator
+	@./randomtestadventurer_result_generator
+
 
 player: player.c interface.o
 	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)

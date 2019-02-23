@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo "============ SMITHY RANDOM TEST ============" >> randomtestcard1.out
+./randomtestcard1 >> randomtestcard1.out
+var=$(gcov dominion.c --function-summaries | grep -n playSmithy | cut -f1 -d:)
+((var++))
+gcov dominion.c --function-summaries | head -n$(echo $var) | tail -n2 >> randomtestcard1.out
+gcov dominion.c >> randomtestcard1.out
+echo -e "\n\n" >> randomtestcard1.out
