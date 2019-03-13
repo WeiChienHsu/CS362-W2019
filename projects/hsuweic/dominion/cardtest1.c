@@ -4,8 +4,6 @@
   the other revealed card.
  * 1. After playing Adventurer, there should have 2 Treasure(GOLD/SILVER/COPPER) in hand.
  * 2. After playing Adventurer, there should not have any Treasure in the discard
- * 3. 
- * 4. 
  */
 #include "dominion.h"
 #include "dominion_helpers.h"

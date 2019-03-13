@@ -61,6 +61,27 @@ unittestresults: unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 car
 	@./unittest_result_generator
 	@chmod +x cardtest_result_generator
 	@./cardtest_result_generator
+	echo "============ GENERAL ANALYSIS ============" >> unittestresults.out
+	gcov dominion.c --function-summaries >> unittestresults.out
+
+
+random_test_helper.o: random_test_helper.h random_test_helper.c
+	gcc -c random_test_helper.c -g  $(CFLAGS)
+
+randomtestcard1:randomtestcard1.c dominion.o random_test_helper.o rngs.o
+	gcc -o randomtestcard1 randomtestcard1.c -g dominion.o random_test_helper.o rngs.o $(CFLAGS) 
+
+randomtestcard2:randomtestcard2.c dominion.o random_test_helper.o rngs.o
+	gcc -o randomtestcard2 randomtestcard2.c -g dominion.o random_test_helper.o rngs.o $(CFLAGS) 
+
+randomtestadventurer:randomtestadventurer.c dominion.o random_test_helper.o rngs.o
+	gcc -o randomtestadventurer randomtestadventurer.c -g dominion.o random_test_helper.o rngs.o $(CFLAGS) 
+
+randomtestresults: randomtestcard1 randomtestcard2 randomtestadventurer
+	@chmod +x randomtest_result_generator
+	@./randomtest_result_generator
+	echo "============ GENERAL ANALYSIS ============" >> randomtestresults.out
+	gcov dominion.c --function-summaries >> randomtestresults.out
 
 
 player: player.c interface.o
@@ -69,4 +90,4 @@ player: player.c interface.o
 all: playdom player 
 
 clean:
-	rm -f *.o playdom.exe playdom player player.exe test_helper unittest1 unittest2 unittest3 cardtest4 cardtest1 cardtest2 cardtest3 unittest4 *.gcov *.gcda *.gcno *.so *.out testDrawCard testDrawCard.exe
+	rm -f *.o playdom.exe playdom player player.exe test_helper random_test_helper randomtestadventurer randomtestcard1 randomtestcard2 unittest1 unittest2 unittest3 cardtest4 cardtest1 cardtest2 cardtest3 unittest4 *.gcov *.gcda *.gcno *.so *.out testDrawCard testDrawCard.exe
