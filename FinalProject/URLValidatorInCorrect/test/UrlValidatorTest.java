@@ -71,49 +71,99 @@ public class UrlValidatorTest extends TestCase {
     public int NUM_PASSED_URL_PATH = passedUrlPath.size();
     public int NUM_FAILED_URL_PATH = failedUrlPath.size();
 
-    public UrlValidatorTest(String testName) {
+    public UrlValidatorTest(String testName)
+    {
         super(testName);
     }
 
     public void testManualTest()
     {
-        //You can use this function to implement your manual testing
-
+        String[] schemes = {"http","https"};
+        UrlValidator urlValidator = new UrlValidator();
+        if (urlValidator.isValid("HARDCODED URL HERE"))
+        {
+            System.out.println("url is valid");
+        }
+        else
+        {
+            System.out.println("url is invalid");
+        }
     }
 
     public void testYourFirstPartition()
     {
         //You can use this function to implement your First Partition testing
+        // URLS that are valid
+
+        //randomly make 1000 valid urls and test them, assert true
+        int testNum = 1000;
+        UrlValidator validator = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES);
+        String testURL = "";
+        for(int i = 0; i < testNum; i++)
+        {
+            testURL = "";
+            testURL += UrlRandomGenerator.randURL(0);
+            //System.out.println("Our valid URL: " + testURL);
+            //assertTrue(validator.isValid(testURL));
+            if(!validator.isValid(testURL))
+            {
+                System.out.println("Error: URL should be valid: " + testURL);
+            }
+        }
 
     }
 
     public void testYourSecondPartition()
     {
         //You can use this function to implement your Second Partition testing
+        // URLS that are invalid
+        // randomly 1000 times make invalid URLS
+        // <scheme>://<authority+port><path>?<query>
+        //    1             2      3    4
+        int testNum = 200; // tests 1000 random invalid URLS, as 1000/5 = 200
+        UrlValidator validator = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES);
+        String testURL = "";
+        for(int i = 1; i < 6; i++)
+        { // 1 2 3 4 5
+            testURL = "";
+            testURL += UrlRandomGenerator.randURL(i);
+            //System.out.println("Our invalid URL: " + testURL);
+            //assertFalse(validator.isValid(testURL));
+            if(validator.isValid(testURL))
+            {
+                System.out.println("Error: URL should be invalid: " + testURL);
+            }
 
+        }
     }
 
     /* Referenced from the Correct Project */
     @Override
-    protected void setUp() {
-        for (int index = 0; index < testPartsIndex.length - 1; index++) {
+    protected void setUp()
+    {
+        for (int index = 0; index < testPartsIndex.length - 1; index++)
+        {
             testPartsIndex[index] = 0;
         }
     }
 
     /* Referenced from the Correct Project */
-    public void testIsValid() {
+    public void testIsValid()
+    {
         testIsValid(testUrlParts, UrlValidator.ALLOW_ALL_SCHEMES);
         setUp();
     }
 
     /* Referenced from the Correct Project */
-    public void testIsValid(Object[] testObjects, long allowAllSchemes) {
+    public void testIsValid(Object[] testObjects, long allowAllSchemes)
+    {
         UrlValidator urlValidator = new UrlValidator(null, null, allowAllSchemes);
         Random random = new Random(System.currentTimeMillis());
-        do {
+        do
+        {
             passedUrlTest(urlValidator, random);
-        } while (incrementTestPartsIndex(testPartsIndex, testObjects));
+        }
+        while (incrementTestPartsIndex(testPartsIndex, testObjects));
     }
 
     /* Create by Wei-Chien Hsu */
@@ -140,7 +190,7 @@ public class UrlValidatorTest extends TestCase {
 
         boolean result = urlValidator.isValid(url);
 
-        if(expectValidation == actualValidation)
+        if(expectValidation != actualValidation)
         {
             /* Print the error message */
             System.out.println("url: " + url + " should have been: " + expectValidation);
@@ -332,12 +382,10 @@ public class UrlValidatorTest extends TestCase {
             new ResultPair("httpd", false),
             new ResultPair("telnet", false)};
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         UrlValidator urlValidator;
         urlValidator = new UrlValidator();
         System.out.println(urlValidator.isValid("http://www.google.com"));
     }
-
-
-
 }
