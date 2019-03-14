@@ -140,7 +140,7 @@ public class UrlValidatorTest extends TestCase {
 
         boolean result = urlValidator.isValid(url);
 
-        if(expectValidation != actualValidation)
+        if(expectValidation == actualValidation)
         {
             /* Print the error message */
             System.out.println("url: " + url + " should have been: " + expectValidation);
