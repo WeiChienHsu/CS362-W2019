@@ -30,8 +30,8 @@
       <file leaf-file-name="UrlValidatorTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/UrlValidatorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1628">
-              <caret line="74" column="4" lean-forward="false" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="4" />
+            <state relative-caret-position="375">
+              <caret line="122" column="39" lean-forward="true" selection-start-line="122" selection-start-column="39" selection-end-line="122" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#290#298#0" expanded="true" />
@@ -42,6 +42,7 @@
                 <element signature="e#1142#1150#0" expanded="true" />
                 <element signature="e#1288#1296#0" expanded="true" />
                 <element signature="e#1464#1472#0" expanded="true" />
+                <element signature="e#2141#2142#0" expanded="true" />
                 <element signature="e#2172#2173#0" expanded="true" />
               </folding>
             </state>
@@ -243,7 +244,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UrlValidatorTest.testManualTest">
+  <component name="RunManager" selected="JUnit.UrlValidatorTest.testYourSecondPartition">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -339,6 +340,26 @@
       <envs />
       <patterns />
     </configuration>
+    <configuration name="UrlValidatorTest.testYourSecondPartition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="URLValidatorInCorrect" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UrlValidatorTest" />
+      <option name="METHOD_NAME" value="testYourSecondPartition" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -399,18 +420,20 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.UrlValidatorTest" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.UrlValidatorTest.testIsValid" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.UrlValidatorTest.testYourFirstPartition" />
       <item index="3" class="java.lang.String" itemvalue="JUnit.UrlValidatorTest.testManualTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.UrlValidatorTest.testYourSecondPartition" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.UrlValidatorTest.testManualTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.UrlValidatorTest.testYourFirstPartition" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.UrlValidatorTest.testIsValid" />
-        <item index="3" class="java.lang.String" itemvalue="Application.UrlValidatorTest" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.UrlValidatorTest.testYourSecondPartition" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.UrlValidatorTest.testManualTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.UrlValidatorTest.testYourFirstPartition" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.UrlValidatorTest.testIsValid" />
+        <item index="4" class="java.lang.String" itemvalue="Application.UrlValidatorTest" />
       </list>
     </recent_temporary>
   </component>
@@ -431,9 +454,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UrlValidatorTest_testIsValid - 2019.03.14 at 14h 37m 50s.xml">
-      <configuration name="UrlValidatorTest.testIsValid" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="UrlValidatorTest_testIsValid - 2019.03.14 at 14h 38m 23s.xml">
       <configuration name="UrlValidatorTest.testIsValid" configurationId="JUnit" />
     </history-entry>
@@ -461,6 +481,9 @@
     <history-entry file="UrlValidatorTest_testYourFirstPartition - 2019.03.14 at 15h 46m 38s.xml">
       <configuration name="UrlValidatorTest.testYourFirstPartition" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="UrlValidatorTest_testYourSecondPartition - 2019.03.14 at 16h 32m 23s.xml">
+      <configuration name="UrlValidatorTest.testYourSecondPartition" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="0" width="1920" height="1080" extended-state="0" />
@@ -476,7 +499,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33962265" sideWeight="0.4978701" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43594837" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2591857" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21246007" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -750,6 +773,7 @@
             <element signature="e#1142#1150#0" expanded="true" />
             <element signature="e#1288#1296#0" expanded="true" />
             <element signature="e#1464#1472#0" expanded="true" />
+            <element signature="e#2141#2142#0" expanded="true" />
             <element signature="e#2172#2173#0" expanded="true" />
           </folding>
         </state>
@@ -769,6 +793,7 @@
             <element signature="e#1142#1150#0" expanded="true" />
             <element signature="e#1288#1296#0" expanded="true" />
             <element signature="e#1464#1472#0" expanded="true" />
+            <element signature="e#2141#2142#0" expanded="true" />
             <element signature="e#2172#2173#0" expanded="true" />
           </folding>
         </state>
@@ -865,6 +890,7 @@
             <element signature="e#1142#1150#0" expanded="true" />
             <element signature="e#1288#1296#0" expanded="true" />
             <element signature="e#1464#1472#0" expanded="true" />
+            <element signature="e#2141#2142#0" expanded="true" />
             <element signature="e#2172#2173#0" expanded="true" />
           </folding>
         </state>
@@ -1071,8 +1097,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/UrlValidatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1628">
-          <caret line="74" column="4" lean-forward="false" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="4" />
+        <state relative-caret-position="375">
+          <caret line="122" column="39" lean-forward="true" selection-start-line="122" selection-start-column="39" selection-end-line="122" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#290#298#0" expanded="true" />
@@ -1083,6 +1109,7 @@
             <element signature="e#1142#1150#0" expanded="true" />
             <element signature="e#1288#1296#0" expanded="true" />
             <element signature="e#1464#1472#0" expanded="true" />
+            <element signature="e#2141#2142#0" expanded="true" />
             <element signature="e#2172#2173#0" expanded="true" />
           </folding>
         </state>
