@@ -1,0 +1,26 @@
+#!/bin/bash
+
+echo "============ ADVENTURER RANDOM TEST  ============" >> randomtestresults.out
+./randomtestadventurer >> randomtestresults.out
+var=$(gcov dominion.c --function-summaries | grep -n playAdventurer | cut -f1 -d:)
+((var++))
+gcov dominion.c --function-summaries | head -n$(echo $var) | tail -n2 >> randomtestresults.out
+gcov dominion.c >> randomtestresults.out
+echo -e "\n\n" >> randomtestresults.out
+
+echo "============ SMITHY RANDOM TEST ============" >> randomtestresults.out
+./randomtestcard1 >> randomtestresults.out
+var=$(gcov dominion.c --function-summaries | grep -n playSmithy | cut -f1 -d:)
+((var++))
+gcov dominion.c --function-summaries | head -n$(echo $var) | tail -n2 >> randomtestresults.out
+gcov dominion.c >> randomtestresults.out
+echo -e "\n\n" >> randomtestresults.out
+
+
+echo "============ VILLAGE RANDOM TEST ============" >> randomtestresults.out
+./randomtestcard2 >> randomtestresults.out
+var=$(gcov dominion.c --function-summaries | grep -n playVILLAGE | cut -f1 -d:)
+((var++))
+gcov dominion.c --function-summaries | head -n$(echo $var) | tail -n2 >> randomtestresults.out
+gcov dominion.c >> randomtestresults.out
+echo -e "\n\n" >> randomtestresults.out

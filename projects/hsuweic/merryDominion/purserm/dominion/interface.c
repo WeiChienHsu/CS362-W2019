@@ -15,59 +15,59 @@ Sam Heinith CS362
 
 void cardNumToName(int card, char *name){
   switch(card){
-  case curse: strcpy(name,"Curse");
+  case CURSE: strcpy(name,"Curse");
     break;
-  case estate: strcpy(name,"Estate");
+  case ESTATE: strcpy(name,"Estate");
     break;
-  case duchy: strcpy(name,"Duchy");
+  case DUCHY: strcpy(name,"Duchy");
     break;
-  case province: strcpy(name,"Province");
+  case PROVINCE: strcpy(name,"Province");
     break;
-  case copper: strcpy(name,"Copper");
+  case COPPER: strcpy(name,"Copper");
     break;
-  case silver: strcpy(name,"Silver");
+  case SILVER: strcpy(name,"Silver");
     break;
-  case gold: strcpy(name,"Gold");
+  case GOLD: strcpy(name,"Gold");
     break;
-  case adventurer: strcpy(name,"Adventurer");
+  case ADVENTURER: strcpy(name,"Adventurer");
     break;
-  case council_room: strcpy(name,"Council Room");
+  case COUNCIL_ROOM: strcpy(name,"Council Room");
     break;
-  case feast: strcpy(name,"Feast");
+  case FEAST: strcpy(name,"Feast");
     break;
-  case gardens: strcpy(name,"Gardens");
+  case GARDENS: strcpy(name,"Gardens");
     break;
-  case mine: strcpy(name,"Mine");
+  case MINE: strcpy(name,"Mine");
     break;
-  case remodel: strcpy(name,"Remodel");
+  case REMODEL: strcpy(name,"Remodel");
     break;
-  case smithy: strcpy(name,"Smithy");
+  case SMITHY: strcpy(name,"Smithy");
     break;
-  case village: strcpy(name,"Village");
+  case VILLAGE: strcpy(name,"Village");
     break;
-  case baron: strcpy(name,"Baron");
+  case BARON: strcpy(name,"Baron");
     break;
-  case great_hall: strcpy(name,"Great Hall");
+  case GREAT_HALL: strcpy(name,"Great Hall");
     break;
-  case minion: strcpy(name,"Minion");
+  case MINION: strcpy(name,"Minion");
     break;
-  case steward: strcpy(name,"Steward");
+  case STEWARD: strcpy(name,"Steward");
     break;
-  case tribute: strcpy(name,"Tribute");
+  case TRIBUTE: strcpy(name,"Tribute");
     break;
-  case ambassador: strcpy(name,"Ambassador");
+  case AMBASSADOR: strcpy(name,"Ambassador");
     break;
-  case cutpurse: strcpy(name,"Cutpurse");
+  case CUTPURSE: strcpy(name,"Cutpurse");
     break;
-  case embargo: strcpy(name,"Embargo");
+  case EMBARGO: strcpy(name,"Embargo");
     break;
-  case outpost: strcpy(name,"Outpost");
+  case OUTPOST: strcpy(name,"Outpost");
     break;
-  case salvager: strcpy(name,"Salvager");
+  case SALVAGER: strcpy(name,"Salvager");
     break;
-  case sea_hag: strcpy(name,"Sea Hag");
+  case SEA_HAG: strcpy(name,"Sea Hag");
     break;
-  case treasure_map: strcpy(name,"Treasure Map");
+  case TREASURE_MAP: strcpy(name,"Treasure Map");
     break;
 
   default: strcpy(name,"?");
@@ -80,59 +80,59 @@ void cardNumToName(int card, char *name){
 int getCardCost(int card) {
   int cost;
   switch(card) {
-  case curse: cost = CURSE_COST;
+  case CURSE: cost = CURSE_COST;
     break;
-  case estate: cost = ESTATE_COST;
+  case ESTATE: cost = ESTATE_COST;
     break;
-  case duchy: cost = DUCHY_COST;
+  case DUCHY: cost = DUCHY_COST;
     break;
-  case province: cost = PROVINCE_COST;
+  case PROVINCE: cost = PROVINCE_COST;
     break;
-  case copper: cost = COPPER_COST;
+  case COPPER: cost = COPPER_COST;
     break;
-  case silver: cost = SILVER_COST;
+  case SILVER: cost = SILVER_COST;
     break;
-  case gold: cost = GOLD_COST;
+  case GOLD: cost = GOLD_COST;
     break;
-  case adventurer: cost = ADVENTURER_COST;
+  case ADVENTURER: cost = ADVENTURER_COST;
     break;
-  case council_room: cost = COUNCIL_ROOM_COST;
+  case COUNCIL_ROOM: cost = COUNCIL_ROOM_COST;
     break;
-  case feast: cost = FEAST_COST;
+  case FEAST: cost = FEAST_COST;
     break;
-  case gardens: cost = GARDEN_COST;
+  case GARDENS: cost = GARDEN_COST;
     break;
-  case mine:  cost = MINE_COST;
+  case MINE:  cost = MINE_COST;
     break;
-  case remodel: cost = REMODEL_COST;
+  case REMODEL: cost = REMODEL_COST;
     break;
-  case smithy: cost = SMITHY_COST;
+  case SMITHY: cost = SMITHY_COST;
     break;
-  case village: cost = VILLAGE_COST;
+  case VILLAGE: cost = VILLAGE_COST;
     break;
-  case baron: cost = BARON_COST;
+  case BARON: cost = BARON_COST;
     break;
-  case great_hall: cost = GREAT_HALL_COST;
+  case GREAT_HALL: cost = GREAT_HALL_COST;
     break;
-  case minion: cost = MINION_COST;
+  case MINION: cost = MINION_COST;
     break;
-  case steward: cost = STEWARD_COST;
+  case STEWARD: cost = STEWARD_COST;
     break;
-  case tribute: cost = TRIBUTE_COST;
+  case TRIBUTE: cost = TRIBUTE_COST;
     break;
-  case ambassador: cost = AMBASSADOR_COST;
+  case AMBASSADOR: cost = AMBASSADOR_COST;
     break;
-  case cutpurse: cost = CUTPURSE_COST;
+  case CUTPURSE: cost = CUTPURSE_COST;
     break;
-  case embargo: cost = EMBARGO_COST;
+  case EMBARGO: cost = EMBARGO_COST;
     break;
-  case outpost: cost = OUTPOST_COST;
+  case OUTPOST: cost = OUTPOST_COST;
     break;
-  case salvager: cost = SALVAGER_COST;
+  case SALVAGER: cost = SALVAGER_COST;
     break;
-  case sea_hag: cost = SEA_HAG_COST;
+  case SEA_HAG: cost = SEA_HAG_COST;
     break;
-  case treasure_map: cost = TREASURE_MAP_COST;
+  case TREASURE_MAP: cost = TREASURE_MAP_COST;
     break;
   default: cost = ONETHOUSAND;
   }
@@ -276,7 +276,7 @@ void phaseNumToName(int phase, char *name) {
 
 
 int addCardToHand(int player, int card, struct gameState *game) {
-  if(card >= adventurer && card < NUM_TOTAL_K_CARDS){
+  if(card >= ADVENTURER && card < NUM_TOTAL_K_CARDS){
     int handTop = game->handCount[player];
     game->hand[player][handTop] = card;
     game->handCount[player]++;
@@ -296,7 +296,7 @@ void selectKingdomCards(int randomSeed, int kingCards[NUM_K_CARDS]) {
   while(numSelected < NUM_K_CARDS) {
     used = FALSE;
     card = floor(Random() * NUM_TOTAL_K_CARDS);
-    if(card < adventurer) continue;
+    if(card < ADVENTURER) continue;
     for(i = 0; i < numSelected; i++) {
       if(kingCards[i] == card) {
 	used = TRUE;
@@ -316,11 +316,11 @@ int countHandCoins(int player, struct gameState *game) {
   for(index = 0; index < game->handCount[player]; index++) {
     card = game->hand[player][index];
     switch(card) {
-    case copper: coinage += COPPER_VALUE;
+    case COPPER: coinage += COPPER_VALUE;
       break;
-    case silver: coinage += SILVER_VALUE;
+    case SILVER: coinage += SILVER_VALUE;
       break;
-    case gold: coinage += GOLD_VALUE;
+    case GOLD: coinage += GOLD_VALUE;
       break;
     }
   }
@@ -335,20 +335,20 @@ void executeBotTurn(int player, int *turnNum, struct gameState *game) {
   printSupply(game);	
   //sleep(1); //Thinking...
 	
-  if(coins >= PROVINCE_COST && supplyCount(province,game) > 0) {
-    buyCard(province,game);
+  if(coins >= PROVINCE_COST && supplyCount(PROVINCE,game) > 0) {
+    buyCard(PROVINCE,game);
     printf("Player %d buys card Province\n\n", player);
   }
-  else if(supplyCount(province,game) == 0 && coins >= DUCHY_COST ) {
-    buyCard(duchy,game);
+  else if(supplyCount(PROVINCE,game) == 0 && coins >= DUCHY_COST ) {
+    buyCard(DUCHY,game);
     printf("Player %d buys card Duchy\n\n", player);
   }
-  else if(coins >= GOLD_COST && supplyCount(gold,game) > 0) {
-    buyCard(gold,game);
+  else if(coins >= GOLD_COST && supplyCount(GOLD,game) > 0) {
+    buyCard(GOLD,game);
     printf("Player %d buys card Gold\n\n", player);
   }
-  else if(coins >= SILVER_COST && supplyCount(silver,game) > 0) {
-    buyCard(silver,game);
+  else if(coins >= SILVER_COST && supplyCount(SILVER,game) > 0) {
+    buyCard(SILVER,game);
     printf("Player %d buys card Silver\n\n", player);
 
   }
