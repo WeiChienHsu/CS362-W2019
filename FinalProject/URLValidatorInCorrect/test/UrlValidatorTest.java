@@ -120,20 +120,22 @@ public class UrlValidatorTest extends TestCase {
         // randomly 1000 times make invalid URLS
         // <scheme>://<authority+port><path>?<query>
         //    1             2      3    4
-        int testNum = 200; // tests 1000 random invalid URLS, as 1000/5 = 200
+        int testNum = 40; // tests 1000 random invalid URLS, as 1000/5 = 200
         UrlValidator validator = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES);
         String testURL = "";
-        for(int i = 1; i < 6; i++)
-        { // 1 2 3 4 5
-            testURL = "";
-            testURL += UrlRandomGenerator.randURL(i);
-            //System.out.println("Our invalid URL: " + testURL);
-            //assertFalse(validator.isValid(testURL));
-            if(validator.isValid(testURL))
-            {
-                System.out.println("Error: URL should be invalid: " + testURL);
+        for(int j = 0; j < testNum; j++)
+        {
+            for(int i = 1; i < 6; i++)
+            { // 1 2 3 4 5
+                testURL = "";
+                testURL += UrlRandomGenerator.randURL(i);
+                //System.out.println("Our invalid URL: " + testURL);
+                //assertFalse(validator.isValid(testURL));
+                if(validator.isValid(testURL))
+                {
+                    System.out.println("Error: URL should be invalid: " + testURL);
+                }
             }
-
         }
     }
 
