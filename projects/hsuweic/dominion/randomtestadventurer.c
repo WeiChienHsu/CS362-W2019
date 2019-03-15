@@ -53,6 +53,9 @@ void testCardAdventurer()
             game.deck[currentPlayer][i] = treasure_cards[rand() % TREASURE_CARD_NUM];
         }
 
+        /* Add Smith to hand */
+        gainCard(ADVENTURER, &game, 2, currentPlayer);
+
         /* The main tested function */
         playAdventurer(&game, handHold, currentPlayer);
         
