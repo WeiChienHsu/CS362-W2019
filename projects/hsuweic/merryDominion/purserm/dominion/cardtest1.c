@@ -19,10 +19,13 @@ void testCardAdventurer()
 {
   int currentPlayer, currentHandCount;
   int numPlayers = 2;
-  int handHold[MAX_HAND];
   int k[10] = {ADVENTURER, GARDENS, EMBARGO, VILLAGE, MINION, MINE, CUTPURSE, SEA_HAG, TRIBUTE, SMITHY};
   struct gameState* G = newGame();
   bool test_result = true;
+  int choice1 = 0;
+	int choice2 = 0;
+	int choice3 = 0;
+
 
 
 	/* initialize a game state and player cards */
@@ -39,7 +42,9 @@ void testCardAdventurer()
 
   gainCard(ADVENTURER, G, 2, currentPlayer);
   currentHandCount = G->handCount[currentPlayer];
-  playAdventurer(G, handHold, currentPlayer);
+
+  cardEffect(ADVENTURER, choice1, choice2, choice3, G, 0, NULL);
+
   printf("=============== TEST COPPER ===============\n");
   printf("In Deck: ESTATE/COPPER/ESTATE/ESTATE/ESTATE/CPPPER \n");
   testEqual("There should have 3 ESTATE were discarded", 4, G->discardCount[currentPlayer], &test_result);
@@ -59,7 +64,7 @@ void testCardAdventurer()
 
   gainCard(ADVENTURER, G, 2, currentPlayer);
   currentHandCount = G->handCount[currentPlayer];
-  playAdventurer(G, handHold, currentPlayer);
+  cardEffect(ADVENTURER, choice1, choice2, choice3, G, 0, NULL);
   printf("=============== TEST SILVER ===============\n");
   printf("In Deck: ESTATE/SILVER/ESTATE/ESTATE/ESTATE/SILVER \n");
   testEqual("There should have 3 ESTATE were discarded", 4, G->discardCount[currentPlayer], &test_result);
@@ -79,7 +84,9 @@ void testCardAdventurer()
 
   gainCard(ADVENTURER, G, 2, currentPlayer);
   currentHandCount = G->handCount[currentPlayer];
-  playAdventurer(G, handHold, currentPlayer);
+  cardEffect(ADVENTURER, choice1, choice2, choice3, G, 0, NULL);
+
+
   printf("=============== TEST GOLD ===============\n");
   printf("In Deck: ESTATE/GOLD/ESTATE/ESTATE/ESTATE/CPPPER \n");
   testEqual("There should have 3 ESTATE were discarded", 4, G->discardCount[currentPlayer], &test_result);
