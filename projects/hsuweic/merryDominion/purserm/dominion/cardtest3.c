@@ -20,7 +20,9 @@ void testCardFeast()
   int k[10] = {ADVENTURER, GARDENS, COUNCIL_ROOM, VILLAGE, MINION, MINE, CUTPURSE, SEA_HAG, TRIBUTE, SMITHY};
   struct gameState* G = newGame();
   bool test_result = true;
-
+  int choice1 = 0;
+	int choice2 = 0;
+	int choice3 = 0;
 
 	/* initialize a game state and player cards */
 	initializeGame(numPlayers, k, SEED, G);
@@ -40,7 +42,9 @@ void testCardFeast()
     }
   }
 
-  playVILLAGE(G, currentPlayer, villagePosition);
+  // playVILLAGE(G, currentPlayer, villagePosition);
+  cardEffect(VILLAGE, choice1, choice2, choice3, G, 0, NULL);
+
 
   testEqual("Check VILLAGE has been played.", VILLAGE, G->playedCards[0], &test_result);
   testEqual("Current player should get 1 more cards", 1, G->handCount[currentPlayer] - currentHandCount, &test_result);
