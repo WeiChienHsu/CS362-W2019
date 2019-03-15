@@ -1,0 +1,200 @@
+============ ADVENTURER RANDOM TEST  ============
+Test: Hand Card Should Contains One more card. || FAILED || expected = 24, actual = 30
+Test: At least contains one type of treasure cards in hand. || FAILED || expected = 0, actual = 1
+Test: There should have 2 TREASURES in HAND || FAILED || expected = 2, actual = 7
+Test: Hand Card Should Contains One more card. || FAILED || expected = 14, actual = 19
+Test: There should have 2 TREASURES in HAND || FAILED || expected = 2, actual = 6
+Test: Hand Card Should Contains One more card. || FAILED || expected = 11, actual = 17
+Test: At least contains one type of treasure cards in hand. || FAILED || expected = 0, actual = 1
+Test: There should have 2 TREASURES in HAND || FAILED || expected = 2, actual = 7
+Test: Hand Card Should Contains One more card. || FAILED || expected = 21, actual = 27
+Test: At least contains one type of treasure cards in hand. || FAILED || expected = 0, actual = 1
+Test: There should have 2 TREASURES in HAND || FAILED || expected = 2, actual = 7
+Test: Hand Card Should Contains One more card. || FAILED || expected = 23, actual = 29
+Test: At least contains one type of treasure cards in hand. || FAILED || expected = 0, actual = 1
+Test: There should have 2 TREASURES in HAND || FAILED || expected = 2, actual = 7
+Test: Hand Card Should Contains One more card. || FAILED || expected = 13, actual = 19
+Test: At least contains one type of treasure cards in hand. || FAILED || expected = 0, actual = 1
+Test: There should have 2 TREASURES in HAND || FAILED || expected = 2, actual = 7
+Test: Hand Card Should Contains One more card. || FAILED || expected = 18, actual = 24
+Test: At least contains one type of treasure cards in hand. || FAILED || expected = 0, actual = 1
+Test: There should have 2 TREASURES in HAND || FAILED || expected = 2, actual = 7
+Test: Hand Card Should Contains One more card. || FAILED || expected = 20, actual = 26
+Test: At least contains one type of treasure cards in hand. || FAILED || expected = 0, actual = 1
+Test: There should have 2 TREASURES in HAND || FAILED || expected = 2, actual = 7
+Test: Hand Card Should Contains One more card. || FAILED || expected = 10, actual = 16
+Test: At least contains one type of treasure cards in hand. || FAILED || expected = 0, actual = 1
+Test: There should have 2 TREASURES in HAND || FAILED || expected = 2, actual = 7
+Test: Hand Card Should Contains One more card. || FAILED || expected = 20, actual = 26
+Test: At least contains one type of treasure cards in hand. || FAILED || expected = 0, actual = 1
+Test: There should have 2 TREASURES in HAND || FAILED || expected = 2, actual = 7
+You got some bugs, please read the error message.
+The testing passed rate is: 27.500000Function 'compare'
+File 'dominion.c'
+Lines executed:21.12% of 644
+dominion.c:creating 'dominion.c.gcov'
+
+
+
+
+============ SMITHY RANDOM TEST ============
+Test: Number of cards in hand should + 3 - 1 after playing Smithy || FAILED || expected = 2, actual = 0
+Test: Number of cards in deck should - 3 + 1 after playing Smithy || FAILED || expected = 2, actual = 0
+Test: Check SMITHY has been played. || FAILED || expected = 13, actual = 1
+Test: Difference between hand and deck should increase by 4 || FAILED || expected = 13, actual = 9
+Test: Number of cards in hand should + 3 - 1 after playing Smithy || FAILED || expected = 2, actual = 1
+Test: Number of cards in deck should - 3 + 1 after playing Smithy || FAILED || expected = 2, actual = 3
+Test: Check SMITHY has been played. || FAILED || expected = 13, actual = 0
+Test: Number of cards in hand should + 3 - 1 after playing Smithy || FAILED || expected = 2, actual = 0
+Test: Number of cards in deck should - 3 + 1 after playing Smithy || FAILED || expected = 2, actual = 0
+Test: Check SMITHY has been played. || FAILED || expected = 13, actual = 11
+Test: Difference between hand and deck should increase by 4 || FAILED || expected = 2, actual = -2
+Test: Number of cards in hand should + 3 - 1 after playing Smithy || FAILED || expected = 2, actual = 0
+Test: Number of cards in deck should - 3 + 1 after playing Smithy || FAILED || expected = 2, actual = 0
+Test: Check SMITHY has been played. || FAILED || expected = 13, actual = 0
+Test: Difference between hand and deck should increase by 4 || FAILED || expected = 23, actual = 19
+Test: Number of cards in hand should + 3 - 1 after playing Smithy || FAILED || expected = 2, actual = 1
+Test: Number of cards in deck should - 3 + 1 after playing Smithy || FAILED || expected = 2, actual = 3
+Test: Check SMITHY has been played. || FAILED || expected = 13, actual = 1
+Test: Number of cards in hand should + 3 - 1 after playing Smithy || FAILED || expected = 2, actual = 1
+Test: Number of cards in deck should - 3 + 1 after playing Smithy || FAILED || expected = 2, actual = 3
+Test: Check SMITHY has been played. || FAILED || expected = 13, actual = 8
+Test: Number of cards in hand should + 3 - 1 after playing Smithy || FAILED || expected = 2, actual = 0
+Test: Number of cards in deck should - 3 + 1 after playing Smithy || FAILED || expected = 2, actual = 0
+Test: Check SMITHY has been played. || FAILED || expected = 13, actual = 5
+Test: Difference between hand and deck should increase by 4 || FAILED || expected = 3, actual = -1
+Test: Number of cards in hand should + 3 - 1 after playing Smithy || FAILED || expected = 2, actual = 0
+Test: Number of cards in deck should - 3 + 1 after playing Smithy || FAILED || expected = 2, actual = 0
+Test: Check SMITHY has been played. || FAILED || expected = 13, actual = 11
+Test: Difference between hand and deck should increase by 4 || FAILED || expected = 17, actual = 13
+Test: Number of cards in hand should + 3 - 1 after playing Smithy || FAILED || expected = 2, actual = 0
+Test: Number of cards in deck should - 3 + 1 after playing Smithy || FAILED || expected = 2, actual = 0
+Test: Difference between hand and deck should increase by 4 || FAILED || expected = 11, actual = 7
+Test: Number of cards in hand should + 3 - 1 after playing Smithy || FAILED || expected = 2, actual = 1
+Test: Number of cards in deck should - 3 + 1 after playing Smithy || FAILED || expected = 2, actual = 3
+Test: Check SMITHY has been played. || FAILED || expected = 13, actual = 10
+You got some bugs, please read the error message.
+The testing passed rate is: 12.500000Function 'compare'
+File 'dominion.c'
+Lines executed:22.67% of 644
+dominion.c:creating 'dominion.c.gcov'
+
+
+
+
+============ VILLAGE RANDOM TEST ============
+Test: Check VILLAGE has been played. || FAILED || expected = 14, actual = 1
+Test: Current player should get 1 more cards || FAILED || expected = 1, actual = 0
+Test: Check VILLAGE has been played. || FAILED || expected = 14, actual = 0
+Test: Current player should get 1 more cards || FAILED || expected = 1, actual = 0
+Test: Check VILLAGE has been played. || FAILED || expected = 14, actual = 11
+Test: Current player should get 1 more cards || FAILED || expected = 1, actual = 0
+Test: Check VILLAGE has been played. || FAILED || expected = 14, actual = 0
+Test: Current player should get 1 more cards || FAILED || expected = 1, actual = 0
+Test: Check VILLAGE has been played. || FAILED || expected = 14, actual = 1
+Test: Current player should get 1 more cards || FAILED || expected = 1, actual = 0
+Test: Check VILLAGE has been played. || FAILED || expected = 14, actual = 8
+Test: Current player should get 1 more cards || FAILED || expected = 1, actual = 0
+Test: Check VILLAGE has been played. || FAILED || expected = 14, actual = 5
+Test: Current player should get 1 more cards || FAILED || expected = 1, actual = 0
+Test: Check VILLAGE has been played. || FAILED || expected = 14, actual = 11
+Test: Current player should get 1 more cards || FAILED || expected = 1, actual = 0
+Test: Check VILLAGE has been played. || FAILED || expected = 14, actual = 13
+Test: Current player should get 1 more cards || FAILED || expected = 1, actual = 0
+Test: Check VILLAGE has been played. || FAILED || expected = 14, actual = 10
+Test: Current player should get 1 more cards || FAILED || expected = 1, actual = 0
+You got some bugs, please read the error message.
+The testing passed rate is: 33.333333Function 'compare'
+File 'dominion.c'
+Lines executed:22.67% of 644
+dominion.c:creating 'dominion.c.gcov'
+
+
+
+
+============ GENERAL ANALYSIS ============
+Function 'compare'
+Lines executed:100.00% of 6
+
+Function 'newGame'
+Lines executed:0.00% of 2
+
+Function 'kingdomCards'
+Lines executed:0.00% of 12
+
+Function 'initializeGame'
+Lines executed:0.00% of 78
+
+Function 'shuffle'
+Lines executed:100.00% of 18
+
+Function 'playCard'
+Lines executed:0.00% of 14
+
+Function 'buyCard'
+Lines executed:0.00% of 13
+
+Function 'numHandCards'
+Lines executed:0.00% of 1
+
+Function 'handCard'
+Lines executed:0.00% of 2
+
+Function 'supplyCount'
+Lines executed:100.00% of 1
+
+Function 'fullDeckCount'
+Lines executed:0.00% of 11
+
+Function 'whoseTurn'
+Lines executed:100.00% of 1
+
+Function 'endTurn'
+Lines executed:0.00% of 22
+
+Function 'isGameOver'
+Lines executed:0.00% of 12
+
+Function 'scoreFor'
+Lines executed:0.00% of 26
+
+Function 'getWinners'
+Lines executed:0.00% of 33
+
+Function 'drawCard'
+Lines executed:95.83% of 24
+
+Function 'getCost'
+Lines executed:10.00% of 30
+
+Function 'adventurerCard'
+Lines executed:100.00% of 16
+
+Function 'smithyCard'
+Lines executed:100.00% of 5
+
+Function 'council_roomCard'
+Lines executed:100.00% of 10
+
+Function 'cutpurseCard'
+Lines executed:0.00% of 16
+
+Function 'sea_hagCard'
+Lines executed:0.00% of 9
+
+Function 'cardEffect'
+Lines executed:13.45% of 238
+
+Function 'discardCard'
+Lines executed:73.33% of 15
+
+Function 'gainCard'
+Lines executed:80.00% of 15
+
+Function 'updateCoins'
+Lines executed:57.14% of 14
+
+File 'dominion.c'
+Lines executed:22.67% of 644
+dominion.c:creating 'dominion.c.gcov'
+

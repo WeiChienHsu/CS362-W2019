@@ -130,7 +130,7 @@ struct gameState gameStateRandomlyGenerate()
 
     for (int i=0; i < TREASURE_MAP + 1; i++) 
     {
-        game.EMBARGOTokens[i] = rand() % GIVEN_BINARY;
+        game.embargoTokens[i] = rand() % GIVEN_BINARY;
     }
 
     game.phase = rand() % (MAX_ACTION_NUMBER + 1);

@@ -647,7 +647,7 @@ int getCost(int cardNumber)
 int adventurerCard(int currentPlayer, struct gameState *state, int drawntreasure){
 	int temphand[MAX_HAND];
 	int z = 0; // counter for tempHand
-	while(drawntreasure<3){
+	while(drawntreasure<2){
 		//if the deck is empty, shuffle discard and add to deck.
 		if(state->deckCount[currentPlayer] <1){
 			shuffle(currentPlayer, state);
