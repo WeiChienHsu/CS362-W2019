@@ -24,11 +24,13 @@
 void testCardAdventurer()
 {
     int testTime = 10;
-    int handHold[MAX_HAND];
     bool test_result = true;
     int test_counter = 0;
     int test_passed_counter = 0;
     int* treasure_cards = malloc(3 * sizeof(SILVER)); 
+    int choice1 = 0;
+    int choice2 = 0;
+    int choice3 = 0;
     treasure_cards[0] = COPPER;
     treasure_cards[1] = ESTATE;
 
@@ -57,7 +59,8 @@ void testCardAdventurer()
         gainCard(ADVENTURER, &game, 2, currentPlayer);
 
         /* The main tested function */
-        playAdventurer(&game, handHold, currentPlayer);
+        // playAdventurer(&game, handHold, currentPlayer);
+        cardEffect(ADVENTURER, choice1, choice2, choice3, &game, 0, NULL);
         
         /* Test for the Hand count and played card  */
         testEqual("Played Card Should Contains One more card.", currentPlayedCardCount + 1, game.playedCardCount, &test_result, &test_counter, &test_passed_counter);

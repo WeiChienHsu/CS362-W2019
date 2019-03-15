@@ -2,7 +2,7 @@
 
 echo "============ ADVENTURER RANDOM TEST  ============" >> randomtestadventurer.out
 ./randomtestadventurer >> randomtestadventurer.out
-var=$(gcov dominion.c --function-summaries | grep -n playAdventurer | cut -f1 -d:)
+var=$(gcov dominion.c --function-summaries | grep -n adventurerCard | cut -f1 -d:)
 ((var++))
 gcov dominion.c --function-summaries | head -n$(echo $var) | tail -n2 >> randomtestadventurer.out
 gcov dominion.c >> randomtestadventurer.out

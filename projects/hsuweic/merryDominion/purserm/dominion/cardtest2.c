@@ -23,6 +23,9 @@ void testCardSmithy()
   int k[10] = {ADVENTURER, GARDENS, EMBARGO, VILLAGE, MINION, MINE, CUTPURSE, SEA_HAG, TRIBUTE, SMITHY};
   struct gameState* G = newGame();
   bool test_result = true;
+  int choice1 = 0;
+	int choice2 = 0;
+	int choice3 = 0;
 
 
 	/* initialize a game state and player cards */
@@ -55,7 +58,9 @@ void testCardSmithy()
 
   currentHandCount = G->handCount[currentPlayer];
   currentDeckCount = G->deckCount[currentPlayer];
-  playSmithy(G, currentPlayer, smithyPosition);
+  // playSmithy(G, currentPlayer, smithyPosition);
+  cardEffect(SMITHY, choice1, choice2, choice3, G, 0, NULL);
+
   testEqual("Number of cards in hand should + 3 - 1 after playing Smithy", 2, G->handCount[currentPlayer] - currentHandCount, &test_result);
   testEqual("Number of cards in deck should - 3 + 1 after playing Smithy", 2, currentDeckCount - G->deckCount[currentPlayer], &test_result);
   testEqual("Check SMITHY has been played.", SMITHY, G->playedCards[0], &test_result);

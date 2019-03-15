@@ -22,7 +22,9 @@ void testCardVillage()
     bool test_result = true;
     int test_counter = 0;
     int test_passed_counter = 0;
-    
+    int choice1 = 0;
+    int choice2 = 0;
+    int choice3 = 0;    
     for(int i = 0; i < testTime; i++)
     {
 
@@ -50,8 +52,9 @@ void testCardVillage()
         game.whoseTurn = currentPlayer;
 
         /* The main tested function */
-        playVILLAGE(&game, currentPlayer, villagePosition);
-        
+        // playVILLAGE(&game, currentPlayer, villagePosition);
+        cardEffect(VILLAGE, choice1, choice2, choice3, &game, 0, NULL);
+
         /* Test for the Hand count and played card  */
         testEqual("Check VILLAGE has been played.", VILLAGE, game.playedCards[0], &test_result, &test_counter, &test_passed_counter);
         testEqual("Current player should get 1 more cards", 1, game.handCount[currentPlayer] - currentHandCount, &test_result, &test_counter, &test_passed_counter);

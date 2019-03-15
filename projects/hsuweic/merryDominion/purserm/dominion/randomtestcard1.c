@@ -23,6 +23,9 @@ void testCardSmithy()
     bool test_result = true;
     int test_counter = 0;
     int test_passed_counter = 0;
+    int choice1 = 0;
+    int choice2 = 0;
+    int choice3 = 0;
     
     for(int i = 0; i < testTime; i++)
     {
@@ -50,7 +53,9 @@ void testCardSmithy()
         currentHandCount = game.handCount[currentPlayer];
         currentDeckCount = game.deckCount[currentPlayer];
 
-        playSmithy(&game, currentPlayer, smithyPosition);
+        // playSmithy(&game, currentPlayer, smithyPosition);
+        cardEffect(SMITHY, choice1, choice2, choice3, &game, 0, NULL);
+
         
         /* Test for the Hand count and played card  */
         testEqual("Number of cards in hand should + 3 - 1 after playing Smithy", 2, game.handCount[currentPlayer] - currentHandCount, &test_result, &test_counter, &test_passed_counter);

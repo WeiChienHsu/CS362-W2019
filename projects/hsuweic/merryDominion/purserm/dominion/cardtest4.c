@@ -22,6 +22,9 @@ void testCardConcilRoom()
   int k[10] = {ADVENTURER, GARDENS, COUNCIL_ROOM, VILLAGE, MINION, MINE, CUTPURSE, SEA_HAG, TRIBUTE, SMITHY};
   struct gameState* G = newGame();
   bool test_result = true;
+  int choice1 = 0;
+	int choice2 = 0;
+	int choice3 = 0;
 
 
 	/* initialize a game state and player cards */
@@ -42,7 +45,9 @@ void testCardConcilRoom()
     }
   }
 
-  playCouncilRoom(G, currentPlayer, concilroomPosition);
+  // playCouncilRoom(G, currentPlayer, concilroomPosition);
+  cardEffect(COUNCIL_ROOM, choice1, choice2, choice3, G, 0, NULL);
+
 
   testEqual("Check COUNCIL ROOM has been played.", COUNCIL_ROOM, G->playedCards[0], &test_result);
   testEqual("Current player should get 3 more cards", 3, G->handCount[currentPlayer] - currentHandCount, &test_result);
